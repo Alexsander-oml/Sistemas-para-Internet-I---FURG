@@ -3,102 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Respostas sobre Redes de Computadores</title>
+    <title>Respostas de Redes de Computadores</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 0;
             padding: 20px;
             background: linear-gradient(to right, #00c6ff, #0072ff);
             color: #333;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        h1, h2 {
+            color: #444;
         }
-        h2 {
-            color: #0072ff;
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Quais os tipos de redes de computadores, segundo a classificação por extensão geográfica? Explique a diferença entre elas.</h2>
-        <p>Classificadas por extensão, existem 4 tipos principais:</p>
-        <ul>
-            <li><strong>PAN (Personal Area Network)</strong>: É uma rede usada para comunicação entre dispositivos muito próximos, geralmente dentro do alcance de uma pessoa. Exemplo: dispositivos Bluetooth conectados a um celular ou notebook.</li>
-            <li><strong>LAN (Local Area Network)</strong>: É uma rede que cobre uma área pequena, como uma escola ou um escritório. As LANs permitem a interconexão de dispositivos em uma área limitada, facilitando o compartilhamento de recursos como arquivos, impressoras e acesso à internet. Podem ser conectadas por cabos (Ethernet) ou sem fio (Wi-Fi).</li>
-            <li><strong>MAN (Metropolitan Area Network)</strong>: É uma rede que abrange uma região ou cidade, interligando várias LANs. Frequentemente usadas pelo governo para interconectar prédios e serviços dentro de uma cidade.</li>
-            <li><strong>WAN (Wide Area Network)</strong>: É uma rede que cobre uma grande área geográfica, podendo ser até internacional. Permitem a comunicação a longa distância, interligando redes dentro de uma grande região geográfica.</li>
-        </ul>
-        <p><strong>Diferenças Principais:</strong></p>
-        <ul>
-            <li><strong>Extensão Geográfica</strong>: PANs cobrem áreas muito pequenas, enquanto WANs podem cobrir o globo inteiro.</li>
-            <li><strong>Uso e Aplicação</strong>: PANs são para uso pessoal, LANs para redes locais como escritórios, MANs para áreas metropolitanas e WANs para interconectar grandes distâncias.</li>
-            <li><strong>Tecnologia de Conexão</strong>: Cada tipo de rede pode utilizar diferentes tecnologias de conexão dependendo da sua extensão e requisitos de desempenho, desde conexões Bluetooth em PANs até fibra óptica e satélites em WANs.</li>
-        </ul>
+    <h1>Respostas de Redes de Computadores</h1>
 
-        <h2>Explique os dois tipos de redes de computadores quanto a topologia de redes, trazendo vantagens e desvantagens de cada um dos tipos.</h2>
-        <h3>Peer-to-peer</h3>
-        <p>Neste tipo de rede, os computadores trocam informações entre si, compartilhando arquivos e recursos. Todos os dispositivos na rede têm funções iguais e podem atuar tanto como cliente quanto como servidor. Cada dispositivo pode compartilhar recursos, arquivos e serviços diretamente com outros dispositivos na rede sem a necessidade de um servidor centralizado.</p>
-        <p><strong>Vantagens:</strong></p>
-        <ul>
-            <li>Possui um custo mais baixo, pois não há necessidade de um servidor dedicado, o que pode reduzir os custos de hardware e software.</li>
-            <li>Fácil de configurar e administrar, especialmente para redes pequenas.</li>
-        </ul>
-        <p><strong>Desvantagens:</strong></p>
-        <ul>
-            <li>A falta de um servidor centralizado pode gerar uma baixa segurança para o usuário.</li>
-        </ul>
-        <h3>Cliente-servidor</h3>
-        <p>Nesse tipo de rede, um ou mais servidores centralizados fornecem recursos e serviços para múltiplos clientes. Os servidores gerenciam e armazenam dados, enquanto os clientes solicitam e utilizam esses recursos.</p>
-        <p><strong>Vantagens:</strong></p>
-        <ul>
-            <li>Possui gerenciamento centralizado, facilitando a administração, o gerenciamento e a segurança.</li>
-            <li>Servidores dedicados podem ser otimizados para lidar com muitas solicitações simultaneamente, o que pode melhorar o desempenho da rede.</li>
-        </ul>
-        <p><strong>Desvantagens:</strong></p>
-        <ul>
-            <li>Custo elevado, devido ao servidor dedicado, software de servidor e manutenção.</li>
-            <li>Ponto único de falha, onde se o servidor falhar, todos os clientes ficam sem acesso.</li>
-        </ul>
+    <h2>1. Quais os tipos de redes de computadores, segundo a classificação por extensão geográfica? Explique a diferença entre elas.</h2>
+    <ul>
+        <li><strong>PAN (Personal Area Network):</strong> Rede usada para comunicação entre dispositivos muito próximos, geralmente dentro do alcance de uma pessoa. Exemplo: dispositivos Bluetooth conectados a um celular.</li>
+        <li><strong>LAN (Local Area Network):</strong> Rede que cobre uma área pequena, como uma escola ou escritório. Facilita o compartilhamento de recursos como arquivos, impressoras e acesso à internet. Pode ser conectada por cabos (Ethernet) ou sem fio (Wi-Fi).</li>
+        <li><strong>MAN (Metropolitan Area Network):</strong> Rede que abrange uma cidade ou região metropolitana. Interliga várias LANs. Usada frequentemente por governos para interconectar prédios e serviços.</li>
+        <li><strong>WAN (Wide Area Network):</strong> Rede que cobre uma grande área geográfica, podendo ser internacional. Permite a comunicação a longa distância, interligando redes em grandes regiões geográficas.</li>
+    </ul>
 
-        <h2>Diferencie comutação de circuitos de comutação de pacotes e diga onde é melhor utilizar cada tipo.</h2>
-        <p>A comutação de circuitos e a comutação de pacotes são duas técnicas diferentes para a transmissão de dados em redes de comunicação.</p>
-        <p><strong>Comutação de Circuitos</strong>: Um caminho dedicado é estabelecido entre o transmissor e o receptor para a duração da comunicação. Este caminho permanece reservado e exclusivo para essa conexão durante toda a sessão de comunicação.</p>
-        <p><strong>Comutação de Pacotes</strong>: Os dados são divididos em pacotes pequenos que são transmitidos de forma independente através da rede. Cada pacote pode seguir um caminho diferente até o destino, onde são reordenados e reunidos.</p>
-        <p><strong>Melhor Utilização:</strong></p>
-        <ul>
-            <li><strong>Comutação de Circuitos</strong>: Melhor para aplicações que requerem uma conexão constante e de alta qualidade, como telefonia tradicional. Proporciona um desempenho consistente, mas pode ser menos eficiente na utilização da largura de banda.</li>
-            <li><strong>Comutação de Pacotes</strong>: Ideal para redes de dados modernas, como a internet, e serviços de streaming, onde a flexibilidade, a eficiência e a escalabilidade são mais importantes. É mais eficiente em termos de utilização de largura de banda, mas pode apresentar variações na latência.</li>
-        </ul>
+    <h2>2. Explique os dois tipos de redes de computadores quanto a topologia de redes, trazendo vantagens e desvantagens de cada um dos tipos.</h2>
+    <ul>
+        <li><strong>Peer-to-peer:</strong> Computadores trocam informações diretamente entre si, sem servidor central. Vantagens: baixo custo e fácil configuração. Desvantagens: menor segurança e dificuldade de gerenciamento.</li>
+        <li><strong>Cliente-servidor:</strong> Servidores centralizados fornecem recursos e serviços para clientes. Vantagens: gerenciamento centralizado e maior segurança. Desvantagens: custo elevado e ponto único de falha.</li>
+    </ul>
 
-        <h2>Explique a diferença entre o switch e o hub.</h2>
-        <p>Os switches e os hubs são dispositivos de rede usados para interconectar computadores e outros dispositivos em uma rede local (LAN). Ambos têm a função de encaminhar pacotes de dados, mas diferem significativamente em certos aspectos.</p>
-        <p><strong>Hub</strong>: Transmite pacotes de dados para todos os dispositivos conectados a ele, sem distinguir o destinatário específico, o que pode causar congestionamento e diminuir o desempenho da rede.</p>
-        <p><strong>Switch</strong>: Direciona pacotes apenas ao dispositivo destinatário correto, reduzindo o tráfego desnecessário e melhorando a segurança e o desempenho da rede.</p>
-        <p><strong>Vantagens do Switch</strong>:</p>
-        <ul>
-            <li>Mais inteligente que o Hub, pois serve de concentrador em uma rede de computadores com a diferença de que recebe um sinal vindo de um computador de origem e entrega este sinal somente ao computador destino.</li>
-            <li>Melhora o desempenho da rede ao reduzir o tráfego desnecessário.</li>
-        </ul>
+    <h2>3. Diferencie comutação de circuitos de comutação de pacotes e diga onde é melhor utilizar cada tipo.</h2>
+    <ul>
+        <li><strong>Comutação de circuitos:</strong> Estabelece um caminho dedicado entre transmissor e receptor durante toda a comunicação. Melhor para aplicações que requerem conexão constante e de alta qualidade, como telefonia tradicional.</li>
+        <li><strong>Comutação de pacotes:</strong> Dados são divididos em pacotes pequenos transmitidos independentemente através da rede. Ideal para redes de dados modernas, como a internet, e serviços de streaming. Mais eficiente em termos de largura de banda, mas pode apresentar variações na latência.</li>
+    </ul>
 
-        <h2>Por que existem protocolos de rede? Explique com um exemplo.</h2>
-        <p>Os protocolos de rede existem para garantir que a comunicação entre dispositivos em uma rede seja organizada, eficiente e compreendida de maneira uniforme. Eles definem regras e convenções para a transmissão de dados, assegurando que dispositivos diferentes possam se comunicar de forma eficaz. Sem protocolos, a comunicação em rede seria caótica e ineficaz.</p>
-        <p><strong>Exemplo:</strong> O protocolo TCP/IP (Transmission Control Protocol) + IP (Internet Protocol) é responsável por todo o envio e recebimento de dados em todas as redes e, consequentemente, na Internet. Essa combinação de protocolos é dividida em 4 camadas: recebimento das informações (camada de aplicação), fracionamento em pacotes (transporte), endereçamento (rede) e envio ao destino (interface).</p>
+    <h2>4. Explique a diferença entre o switch e o hub.</h2>
+    <ul>
+        <li><strong>Hub:</strong> Transmite pacotes de dados para todos os dispositivos conectados, causando congestionamento e diminuindo o desempenho da rede.</li>
+        <li><strong>Switch:</strong> Direciona pacotes apenas ao dispositivo destinatário correto, reduzindo o tráfego desnecessário e melhorando a segurança e o desempenho da rede.</li>
+    </ul>
 
-        <h2>Quais os 4 tipos de atraso de rede? Explique cada um.</h2>
-        <ul>
-            <li><strong>Atraso de Processamento no nó:</strong> Tempo necessário para examinar o cabeçalho do pacote, checar a integridade dos dados recebidos e determinar para onde o mesmo deverá ser encaminhado. Geralmente na ordem de micro-segundos.</li>
-            <li><strong>Atraso de Fila:</strong> Tempo que cada pacote espera em fila nos roteadores antes de ser encaminhado ao próximo enlace. Este atraso é variável e depende do tráfego na rede. Pode chegar à ordem de milissegundos.</li>
-            <li><strong>Atraso de Transmissão:</strong> Tempo necessário para enviar todos os bits de um pacote ao longo de um enlace. Depende do tamanho do pacote e da largura de banda do enlace. Geralmente na ordem de micro ou milissegundos.</li>
-            <li><strong>Atraso de Propagação:</strong> Tempo necessário para um bit viajar de um nó até o próximo, ou seja, a distância física entre os nós. Depende da distância entre os nós e da velocidade de propagação do meio de transmissão. Pode chegar à ordem de milissegundos para enlaces muito longos.</li>
-        </ul>
-    </div>
+    <h2>5. Por que existem protocolos de rede? Explique com um exemplo.</h2>
+    <p>Protocolos de rede garantem que a comunicação entre dispositivos seja organizada, eficiente e compreendida de maneira uniforme. Exemplo: TCP/IP, que permite a comunicação eficaz entre dispositivos na internet.</p>
+
+    <h2>6. Quais os 4 tipos de atraso de rede? Explique cada um.</h2>
+    <ul>
+        <li><strong>Atraso de Processamento no nó:</strong> Tempo necessário para examinar o cabeçalho do pacote e determinar o próximo destino.</li>
+        <li><strong>Atraso de Fila:</strong> Tempo que um pacote espera em fila nos roteadores antes de ser encaminhado ao próximo enlace.</li>
+        <li><strong>Atraso de Transmissão:</strong> Tempo necessário para enviar todos os bits de um pacote ao longo de um enlace.</li>
+        <li><strong>Atraso de Propagação:</strong> Tempo necessário para um bit viajar de um nó até o próximo, dependendo da distância física e da velocidade de propagação do meio de transmissão.</li>
+    </ul>
+
+    <h2>7. Por que utiliza-se uma arquitetura em camadas para redes de computadores?</h2>
+    <p>Arquitetura em camadas simplifica o desenvolvimento e manutenção de sistemas complexos, dividindo-os em partes distintas e bem definidas, cada uma com funções específicas. Facilita a abstração, isolamento de problemas, modularidade e escalabilidade.</p>
+
+    <h2>8. Cite as 5 camadas de uma rede de computadores e explique a função de cada uma delas.</h2>
+    <ul>
+        <li><strong>Camada de Aplicação:</strong> Lida com as necessidades de comunicação das aplicações. Exemplo: FTP, SMTP, HTTP.</li>
+        <li><strong>Camada de Transporte:</strong> Garante a entrega confiável e ordenada dos dados entre dispositivos finais. Exemplo: TCP e UDP.</li>
+        <li><strong>Camada de Rede:</strong> Responsável pelo roteamento e endereçamento dos pacotes. Exemplo: Protocolo IP.</li>
+        <li><strong>Camada de Enlace:</strong> Garante a transmissão confiável de dados entre dispositivos em uma LAN. Exemplo: PPP e Ethernet.</li>
+        <li><strong>Camada Física:</strong> Movimenta os bits individuais através do meio de transmissão. Exemplo: fios, fibra, coaxial.</li>
+    </ul>
+
+    <h2>9. Quais os requisitos do serviço de transporte em rede? Explique cada um e dê exemplos.</h2>
+    <ul>
+        <li><strong>Perda:</strong> Refere-se à perda de pacotes durante a transmissão. Exemplo: Streaming de vídeo e chamadas de voz.</li>
+        <li><strong>Banda:</strong> Largura de banda disponível para transmissão de dados. Exemplo: Downloads de arquivos grandes e streaming 4K.</li>
+        <li><strong>Sensibilidade Temporal:</strong> Capacidade de atender a requisitos de tempo crítico. Exemplo: Jogos online.</li>
+    </ul>
+
+    <h2>10. Como funciona o HTTP. Qual a diferença entre conexão persistente e não persistente?</h2>
+    <p>HTTP (Hypertext Transfer Protocol) permite a comunicação entre clientes e servidores na web através de um modelo de requisição-resposta. Em conexões persistentes, uma única conexão TCP é utilizada para múltiplas requisições e respostas, enquanto em conexões não persistentes, uma nova conexão TCP é estabelecida para cada requisição.</p>
+
+    <h2>11. Explique como funcionam os cookies e cite duas vantagens e duas desvantagens de sua utilização.</h2>
+    <p>Cookies são arquivos de texto com pequenos fragmentos de dados, usados para identificar um computador em uma rede. Armazenam informações de preferências e login, permitindo uma navegação mais personalizada. Vantagens: armazenamento de preferências e coleta de dados de comportamento do usuário. Desvantagens: impacto na performance do navegador e preocupações de privacidade.</p>
+
 </body>
 </html>
