@@ -1,4 +1,4 @@
-# README dos Exercícios
+# Sistemas
 
 ## Exercício 1: Mapa do Rio Grande do Sul
 
