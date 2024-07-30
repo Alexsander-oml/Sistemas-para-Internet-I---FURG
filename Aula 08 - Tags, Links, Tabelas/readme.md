@@ -1,27 +1,29 @@
-# README
+# README dos Exercícios
 
-## Mapa do Rio Grande do Sul
+## Exercício 1: Mapa do Rio Grande do Sul
 
-![Mapa do Rio Grande do Sul](figuras/mapa.jpg)
-*Este mapa mostra a região do Rio Grande do Sul.*
+Este exercício apresenta um mapa do Rio Grande do Sul. O código HTML cria uma página simples que exibe uma imagem do mapa com um tamanho específico e uma borda ao redor.
 
-## Universidade Federal do Rio Grande (FURG)
+## Exercício 2: Universidade Federal do Rio Grande com Imagem Grande
 
-![Logo da FURG](figuras/logofurg1.png)
-[Acesse o site da FURG](https://www.furg.br/)
+Neste exercício, a página HTML exibe a Universidade Federal do Rio Grande (FURG) com o logo da universidade em tamanho grande. A página inclui um link para o site oficial da FURG e uma imagem da cidade de Rio Grande ao lado, em tamanho maior.
 
-A Universidade Federal do Rio Grande (FURG) está localizada na cidade de Rio Grande, no Rio Grande do Sul.
+## Exercício 3: Universidade Federal do Rio Grande com Imagem Pequena
 
-### Imagem da Cidade de Rio Grande
+Aqui, a página HTML também mostra a Universidade Federal do Rio Grande, mas com o logo da universidade em tamanho menor. A imagem da cidade de Rio Grande ao lado é reduzida e tem uma borda ao redor.
 
-![Cidade de Rio Grande](figuras/cidade.JPG)
-*Imagem da cidade de Rio Grande.*
+## Exercício 4: Universidade Federal do Rio Grande com Link
 
-## Mapa Interativo
+Este exercício demonstra como adicionar um link ao logo da Universidade Federal do Rio Grande. A imagem do logo é clicável e redireciona para o site da universidade em uma nova aba.
 
-![Mapa Interativo do Rio Grande do Sul](figuras/mapa.jpg)
+## Exercício 5: Mapa Interativo do Rio Grande do Sul
 
-```html
-<map name="mapaRG">
-  <area shape="circle" coords="480,520,20" href="figuras/cidade.JPG" target="_blank" alt="Cidade de Rio Grande"/>
-</map>
+O código HTML aqui cria um mapa interativo do Rio Grande do Sul. A imagem do mapa tem uma área clicável (definida como um círculo) que, quando clicada, abre uma nova aba com uma imagem da cidade de Rio Grande.
+
+## Exercício 6: Tabelas Diversas
+
+Este exercício inclui várias tabelas HTML com diferentes tipos de dados:
+1. **Tabela de Conversação**: Mostra uma sequência de conversas.
+2. **Tabela de Grupos**: Exibe grupos de times de futebol.
+3. **Tabela de Universidades**: Lista nomes e universidades.
+4. **Dados do Censo 2010 da Cidade de Rio Grande**: Fornece informações estatísticas sobr
