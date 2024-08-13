@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Compre seu ingresso</title>
+    <style>
+      body { font-family: Arial, sans-serif;
+      }
+      table {
+      width: 30%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background: linear-gradient(135deg, #800080, #DA70D6);
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      td {
+      padding: 5px;
+      border: 1px solid #fff;
+      }
+      h2 {
+      text-align: center;
+      color: #800080;
+      }
+      input[type="text"], input[type="password"], select {
+      padding: 4px;
+      box-sizing: border-box;
+      }
+      input[type="submit"] {
+      background-color: #800080;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      }
+      input[type="submit"]:hover {
+      background-color: #DA70D6;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 align='center'>Compre seu ingresso:</h2>
+    <form name="input" action="submetido.html" method="get">
+    <table border="1">
+      <tr>
+        <td>Nome</td>
+        <td colspan="2"><input type="text" name="nome" size="55"></td>
+      </tr>
+      <tr>
+        <td rowspan='4'>Ingressos:</td>
+        <td>Tipo</td>
+        <td>Quantidade</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="arquisup">Arquibancada superior</td>
+        <td>
+          <select name="qtdsup">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="arquinf"> Arquibancada inferior</td>
+        <td>
+          <select name="qtdinf">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="camarote"> Camarote</td>
+        <td>
+          <select name="qtdcam">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Forma de Pagamento</td>
+        <td><input type="radio" name="pagamento" value="boleto"> Boleto</td>
+        <td>
+          <input type="radio" name="pagamento" value="cartao_credito"> Cartão de Crédito
+          <select name="parcelas">
+            <option value="avista">À Vista</option>
+            <option value="2x">2x</option>
+            <option value="3x">3x</option>
+            <option value="6x">6x</option>
+            <option value="12x">12x</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Login</td>
+        <td colspan="3"><input type="text" name="login" size="55"></td>
+      </tr>
+      <tr>
+        <td>Senha</td>
+        <td colspan="3"><input type="password" name="senha" size="55"></td>
+      </tr>
+      <tr>
+        <td colspan="4" align="center"><input type="submit" value="Enviar"></td>
+      </tr>
+    </table>
+    </form>
+  </body>
+</html>
+
