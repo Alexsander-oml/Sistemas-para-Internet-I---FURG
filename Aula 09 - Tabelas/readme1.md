@@ -4,6 +4,7 @@
 
 Este exercício consiste em criar uma página HTML com múltiplas tabelas, cada uma exibindo diferentes estruturas e layouts. O objetivo é explorar o uso de várias tags e atributos HTML para formatar tabelas, permitindo uma compreensão prática de como manipular o design e o conteúdo das mesmas.
 
+
 ### Tabelas no Exercício
 
 1. **Tabela de Navegação**:
