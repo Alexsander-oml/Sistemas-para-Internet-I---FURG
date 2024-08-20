@@ -1,0 +1,19 @@
+     h1{
+        color:#ff007f;
+        text-align:center;
+      }
+      h2{
+        color:blue;
+        text-align:left;
+      }
+     p.sec{
+  color:black; 
+  } 
+
+p.pri{
+       color:red;
+       text-align:left;
+       background-color:yellow;
+      } 
+
+      

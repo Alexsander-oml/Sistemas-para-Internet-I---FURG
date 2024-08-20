@@ -1,0 +1,39 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+td {
+    padding: 20px;
+}
+
+.azul {
+    background-color: blue;
+    color: white;
+}
+
+.verde {
+    background-color: green;
+    color: white;
+}
+
+.rosa {
+    background-color: pink;
+    color: black;
+}
+
+.preto {
+    background-color: black;
+    color: white;
+}
+
+.vermelho {
+    background-color: red;
+    color: white;
+}
