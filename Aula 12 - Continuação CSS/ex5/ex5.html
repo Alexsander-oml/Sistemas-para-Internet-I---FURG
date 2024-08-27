@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Jogos</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Referência ao arquivo CSS externo -->
+</head>
+<body>
+    <h2>Cadastro Jogos</h2>
+    <form action="#" method="POST">
+        <table>
+            <tr>
+                <td>Nome:</td>
+                <td><input type="text" id="nome" name="nome" required></td>
+            </tr>
+            <tr>
+                <td>Curso:</td>
+                <td>
+                    <select id="curso" name="curso" required>
+                        <option value="SI">Sistemas de Informação (SI)</option>
+                        <option value="EC">Engenharia de Computação (EC)</option>
+                        <option value="EA">Engenharia Ambiental (EA)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Matrícula:</td>
+                <td><input type="text" id="matricula" name="matricula" required></td>
+            </tr>
+            <tr>
+                <td>Ano:</td>
+                <td>
+                    <select id="ano" name="ano" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Jogos de preferência:</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label><input type="checkbox" name="jogos" value="volei">Vôlei</label>
+                    <label><input type="checkbox" name="jogos" value="basquete">Basquete</label>
+                    <label><input type="checkbox" name="jogos" value="handebol">Handebol</label>
+                    <label><input type="checkbox" name="jogos" value="tenis">Tênis</label>
+                    <label><input type="checkbox" name="jogos" value="futebol">Futebol</label>
+                    <label><input type="checkbox" name="jogos" value="xadrez">Xadrez</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Dia de preferência:</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label><input type="radio" name="dia" value="seg" required>Seg</label>
+                    <label><input type="radio" name="dia" value="ter">Ter</label>
+                    <label><input type="radio" name="dia" value="qua">Qua</label>
+                    <label><input type="radio" name="dia" value="qui">Qui</label>
+                    <label><input type="radio" name="dia" value="sex">Sex</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div style="display: flex; justify-content: space-between;">
+                        <input type="submit" value="ENVIAR">
+                        <input type="reset" value="LIMPAR">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

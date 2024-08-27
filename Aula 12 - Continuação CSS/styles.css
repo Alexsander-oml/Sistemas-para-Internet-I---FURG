@@ -1,0 +1,21 @@
+ body {
+            font-family: Arial, sans-serif;
+        }
+        .serif {
+            font-family: 'Times New Roman', serif;
+        }
+        .sansserif {
+            font-family: Arial, sans-serif;
+        }
+
+p.serif {
+font-family: "Times New Roman", Times,serif;
+font-size:1.25em;
+}
+
+p.sansserif{
+
+font-family: Arial, Helvetica, sans-serif;
+font-style:italic;
+font-size:14px; 
+}

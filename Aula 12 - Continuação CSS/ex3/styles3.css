@@ -1,0 +1,21 @@
+a:link {
+color: blue;
+font: 20px arial;
+}
+
+a:visited {
+color: red;
+font: 20px arial;
+}
+
+a:hover {
+color: yellow;
+font: 20px arial;
+}
+
+a:active {
+color: green;
+font: 40px arial;
+}
+
+

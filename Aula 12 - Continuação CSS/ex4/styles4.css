@@ -1,0 +1,19 @@
+ul.a{
+List-style: circle;
+color: red;
+}
+
+ul.b{
+list-style: square;
+
+}
+
+ol.c{
+list-style: upper-roman;
+color: blue;
+}
+
+ol.d{
+list-style: lower-alpha;
+font-size: 20px;
+}
