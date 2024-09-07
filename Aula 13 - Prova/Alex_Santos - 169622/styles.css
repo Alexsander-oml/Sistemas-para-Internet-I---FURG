@@ -1,0 +1,161 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://wallpapers.com/images/hd/purple-gradient-background-3440-x-1440-uplq0h9e0kplnrx0.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  text-shadow:
+    0 0 5px #7873f5,
+    0 0 10px #7873f5,
+    0 0 15px #7873f5,
+    0 0 20px #7873f5,
+    0 0 25px #7873f5,
+    0 0 30px #7873f5,
+    0 0 35px #7873f5;
+  animation: glow 1.5s ease-in-out infinite alternate;
+  position: relative;
+  /* Adiciona posição relativa */
+  z-index: 10;
+  /* Garante que o título fique acima do container */
+}
+
+@keyframes glow {
+  from {
+    text-shadow:
+      0 0 5px #7873f5,
+      0 0 10px #7873f5,
+      0 0 15px #7873f5,
+      0 0 20px #7873f5,
+      0 0 25px #7873f5,
+      0 0 30px #7873f5,
+      0 0 35px #7873f5;
+  }
+
+  to {
+    text-shadow:
+      0 0 10px #7873f5,
+      0 0 20px #7873f5,
+      0 0 30px #7873f5,
+      0 0 40px #7873f5,
+      0 0 50px #7873f5,
+      0 0 60px #7873f5,
+      0 0 70px #7873f5;
+  }
+}
+
+
+
+.container {
+  text-align: center;
+  margin: 0 auto;
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 35px;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+td {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.azul-escuro {
+  background-color: darkblue;
+  color: white;
+}
+
+.rosa {
+  background-color: pink;
+}
+
+.verde-escuro {
+  background-color: darkgreen;
+  color: white;
+}
+
+.cinza {
+  background-color: gray;
+  color: white;
+}
+
+.marrom {
+  background-color: brown;
+  color: white;
+}
+
+.verde-claro {
+  background-color: lightgreen;
+}
+
+.lilas {
+  background-color: lavender;
+}
+
+.preto {
+  background-color: black;
+  color: white;
+}
+
+.vermelho {
+  background-color: red;
+  color: white;
+}
+
+.azul-claro {
+  background-color: lightblue;
+}
+
+.laranja {
+  background-color: orange;
+  color: white;
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+.signature {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
