@@ -1,0 +1,32 @@
+table{
+    
+    background-image: url(./marcada.png);
+    background-clip: border-box;
+    background-size: 200px; 
+    font-family: Arial, Helvetica;
+    margin:  0 auto; 
+    border: 1px solid black;
+     
+}
+
+
+
+textarea{
+    text-align: center;
+}
+
+td{
+    padding: 10px
+}
+img{
+    opacity : 0.5; 
+    width: 40px;
+    height: 40px;
+}
+
+
+textarea, input{
+    background-color: lightgray;
+}
+
+
