@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora Atual</title>
+    <script>
+        function mostrarHora() {
+            var dataAtual = new Date();
+            var horas = dataAtual.getHours();
+            var minutos = dataAtual.getMinutes();
+            var segundos = dataAtual.getSeconds();
+            var mensagem;
+
+            if (horas < 12) {
+                mensagem = "Bom Dia";
+            } else if (horas < 18) {
+                mensagem = "Boa Tarde";
+            } else {
+                mensagem = "Boa Noite";
+            }
+
+            var horaAtual = horas + ":" + (minutos < 10 ? "0" + minutos : minutos) + ":" + (segundos < 10 ? "0" + segundos : segundos);
+            document.getElementById("hora").innerText = "Hora atual: " + horaAtual;
+            document.getElementById("mensagem").innerText = mensagem;
+        }
+
+        window.onload = mostrarHora;
+    </script>
+</head>
+<body>
+    <h1 id="hora"></h1>
+    <h2 id="mensagem"></h2>
+</body>
+</html>
