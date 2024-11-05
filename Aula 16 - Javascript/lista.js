@@ -6,8 +6,8 @@ function media() {
     media = (n1 + n2 + n3 + n4) / 4;
 
     if (M > 7) {
-        alert("Aprovado");
+        alert("Aprovado com média "+media);
     } else {
-        alert("Reprovado");
+        alert("Reprovado com média "+media);
     }
 }
