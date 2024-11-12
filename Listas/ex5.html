@@ -1,0 +1,36 @@
+<!-- faça um script que imprima todos os números pares compreendidos entre 85 e
+901. O script deve também calcular a soma destes valores.-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maior ou menor</title>
+    <link rel="stylesheet" href="">
+    <script type="text/javascript" language="javascript">
+        function pares() {
+            var soma = 0;
+            for (var i = 85; i <= 901; i++) {
+                if (i % 2 == 0) {
+                    document.getElementById('form').innerHTML += i + '<br>';
+                    soma += i;
+                }
+            }
+            document.getElementById('form').innerHTML += 'A soma dos números pares é: ' + soma;
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <form id="form">
+       
+
+    </form>
+
+</body>
+
+</html>

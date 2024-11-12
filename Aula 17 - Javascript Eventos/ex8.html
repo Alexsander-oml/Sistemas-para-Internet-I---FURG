@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="">
+    <script type="text/javascript" language="javascript">
+
+
+    </script>
+</head>
+
+<body>
+    <!-- Validação formulário -->
+    <!-- Submit (ao submeter o formulario uma função JS é chamada)-->
+    <!-- Campo a Campo (a cada preenchimento um eveneot é disparado para validar o campo) -->
+
+    <table>
+        <form name="form1" action="ex8.php" method="post" onsubmit="return validateForm()">
+            <tr>
+                <td>Nome:</td>
+                <td><input type="text" name="nome" id="nome" onblur="validateNome()"></td>
+                <td><span id="erroNome"></span></td>
+            </tr>
+            <tr>
+                <td>Idade:</td>
+                <td><input type="text" name="idade" id="idade" onblur="validateIdade()"></td>
+                <td><span id="erroIdade"></span></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="email" id="email" onblur="validateEmail()"></td>
+                <td><span id="erroEmail"></span></td>
+            </tr>
+            <tr>
+                <td>Telefone:</td>
+                <td><input type="text" name="telefone" id="telefone" onblur="validateTelefone()"></td>
+                <td><span id="erroTelefone"></span></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Enviar"></td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>

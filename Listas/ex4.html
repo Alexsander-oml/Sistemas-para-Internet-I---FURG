@@ -1,0 +1,44 @@
+<!-- faça um script que leia 5 valores (usando o comando Prompt) e retorne para o
+usuário o menor e o maior valor.-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maior ou menor</title>
+    <link rel="stylesheet" href="">
+    <script type="text/javascript" language="javascript">
+       
+        function menorOrMaior(){
+            for (var i = 0; i < 5; i++) {
+                var n = prompt('Digite um número');
+                if (i == 0) {
+                    var maior = n;
+                    var menor = n;
+                } else {
+                    if (n > maior) {
+                        maior = n;
+                    }
+                    if (n < menor) {
+                        menor = n;
+                    }
+                }
+            }
+            alert('O maior número eh: ' + maior + '\nO menor número eh: ' + menor);
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+<form id="form">
+    <input type="button" value="Menor ou Maior" onclick="menorOrMaior()">
+    
+</form>
+
+</body>
+
+</html>
