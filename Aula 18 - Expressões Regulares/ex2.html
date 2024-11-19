@@ -19,24 +19,27 @@
 </head>
 
 <body>
-    <p><h3>Escreva uma função para determinar se uma string representa
+    <h3>Escreva uma função para determinar se uma string representa
         um número de telefone (fixo ou celular) válido. Exemplos de
         números de telefones válidos:</h3>
-        24
-        • (53) 3123-4567 <br><br>
-        • 533123-4567   <br><br>
-        • (053)3123-4567 <br><br>
-        • (53)31234567<br><br>
-        • 5331234567<br><br>
-        • (053) 91234 5678<br><br>
-        • (053)91234 5678<br><br>
-        • 053912345678<br><br>
-        • 53 91234 5678<br><br>
-        • 5391234 5678<br><br>
-        
+    <ul>
+        <li>(53) 3123-4567</li>
+        <li>533123-4567</li>
+        <li>(053)3123-4567</li>
+        <li>(53)31234567</li>
+        <li>5331234567</li>
+        <li>(053) 91234 5678</li>
+        <li>(053)91234 5678</li>
+        <li>053912345678</li>
+        <li>53 91234 5678</li>
+        <li>5391234 5678</li>
+    </ul>
+    <p>
         ● ddd = d^(0?[1-9]{2}[- ]?|\(0?[0-9]{2}\) ?)<br>
         ● tel = d[2-9]?[0-9]{4}[- ]?[0-9]{4}$<br>
-        ● regexp = ddd + tel</p><br>
+        ● regexp = ddd + tel
+    </p>
+    <br>
     Digite seu número fixo ou celular:<input type="text" id="numberInput" onblur="myfunction()">
     <p id="demo"></p>
 
