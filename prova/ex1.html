@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #5b247a, #1b1b7e);
+            color: white;
+        }
+
+        .menu {
+            width: 11vw;
+            height: 100%;
+            text-align: left;
+            position: fixed;
+            background: linear-gradient(180deg, #2f37d1, #0812cc);
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .menu h3 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .inicial {
+            margin-left: 17vw;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 28px;
+            text-align: left;
+            color: #e4e4ff;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 50%;
+        }
+
+        label {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 50%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <h3>MENU</h3>
+    </div>
+    <div class="inicial">
+        <h2>Matrícula</h2>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="idade">Idade</label>
+                        <input type="number" id="idade">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="matricula">Número matrícula</label>
+                        <input type="number" id="matricula">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="curso">Curso</label>
+                        <select id="curso">
+                            <option value="">Eng. Automação</option>
+                            <option value="">Eng. Computação</option>
+                            <option value="">Sistemas de Informação</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="disciplinas">Disciplinas</label>
+                        <input type="checkbox" id="MAT">Matemática Discreta
+                        <input type="checkbox" id="SI1">Sistemas para Internet I
+                        <input type="checkbox" id="C1">Cálculo I
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="extraclasse">Atividades Extraclasse</label>
+                        <input type="radio" id="MT">Monitoria
+                        <input type="radio" id="IC">Iniciação Científica
+                        <input type="radio" id="MA">Maratona de Programação
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea id="sobre" cols="65" rows="7">Fale onde estudou no ensino médio e qual curso se formou</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="login">Login:</label>
+                        <input type="text" id="login">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpar">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
