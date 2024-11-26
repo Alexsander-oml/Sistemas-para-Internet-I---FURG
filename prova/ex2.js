@@ -8,7 +8,7 @@ function validaNome() {
         return false
     }
     if (teste > 0 && texto != "") {
-        warning.innerHTML = "Apenas letras são permitidas"
+        alert("O nome não pode ser um número")
         return false
     } else {
         warning.innerHTML = ""
@@ -26,7 +26,7 @@ function validaIdade() {
         warning.innerHTML = ""
         return true
     } else {
-        warning.innerHTML = "A idade deve ser um número entre 1 e 120"
+        alert("Idade inválida (entre 1 e 120)")
         return false
     }
 }
