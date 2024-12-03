@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+    <link rel="stylesheet" href="">
+    <script src="jquery.js">
+
+        $("#botao").click(function () { alert("Botao clicado!"); });
+
+        $("p").hover(function () { $(this).css("color", "green"); }, function () { $(this).css("color", "black"); });
+
+        $(document).keydown(function (event) { console.log("Tecla pressionada: " + event.key); });
+
+        $("form").submit(function (event) { event.preventDefault(); alert("Formulario enviado!"); });
+    </script>
+</head>
+
+<body>
+
+    <button id="botao">Clique aqui</button>
+    <p>Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+
+
+</body>
+
+</html>
