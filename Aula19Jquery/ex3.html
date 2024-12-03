@@ -1,0 +1,29 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+    <link rel="stylesheet" href="">
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <h3>Crie uma estrutura HTML com dois inputs. Neste exercício tudo que for escrito no primeiro input deve automaticamente e instantaneamente ser clonado para о segundo input.<!DOCTYPE html>
+    </h3>
+
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+
+
+    <script>
+        $(document).ready(function () {
+            $("#input1").keyup(function () {
+                $("#input2").val($(this).val());
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
