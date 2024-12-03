@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+    <link rel="stylesheet" href="">
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <h3>Crie a seguinte estrutura HTML Um input para receber um nome; Um parágrafo vazio; Um botão denominado concluir.
+        Documentação 10 Note que o usuário deve preencher seu nome e clicar concluir, logo em seguida o paragrafo vazio
+        atualizado para a seguinte frase "seu nome é:" nome que o usuário digitou.</h3>
+
+    <input type="text" id="nome">
+    <p id="paragrafo"></p>
+    <button id="botao">Concluir</button>
+
+    <script>
+       $(document).ready(function () {
+       // Esta função é executada quando o documento HTML está completamente carregado
+    $("#botao").click(function () {
+        // executa quando o elemento com id "botao" é clicado.
+        var nome = $("#nome").val();
+        // pega o valor do campo de entrada com id "nome" e armazena na variável 'nome'.
+        $("#paragrafo").text("Seu nome é: " + nome);
+        // defini o texto do elemento com id "paragrafo" para "Seu nome é: " seguido do valor da variável 'nome'.
+    });
+});
+    </script>
+
+</body>
+
+</html>
