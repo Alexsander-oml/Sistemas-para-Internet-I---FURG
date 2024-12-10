@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Construa um gráfico de linhas com 2 linhas(linha A e linha B) e 3 pontos(ponto a, ponto b, ponto c)</title>
+    <link rel="stylesheet" href="">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script>
+        $(document).ready(function () {
+            var chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'grafico',
+                    type: 'line'
+                },
+                title: {
+                    text: 'Gráfico de Linhas do alekao'
+                },
+                xAxis: {
+                    categories: ['Ponto A', 'Ponto B', 'Ponto C']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Valores'
+                    }
+                },
+                series: [{
+                    name: 'Linha A',
+                    data: [20, 4, 9]
+                }, {
+                    name: 'Linha B',
+                    data: [15, 8, 12]
+                }]
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="grafico" style="width: 600px; height: 400px;">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Construa um gráfico de barras 
+        (horizontal) com os seguintes dados: 
+         • Categorias: 
+         Valores:
+          • Janeiro 10 
+          • Fevereiro 20 
+          • Março 30 
+          • Abril  40</title>
+    <link rel="stylesheet" href="">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script>
+        $(document).ready(function () {
+            var chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'grafico',
+                    type: 'bar'
+                },
+                title: {
+                    text: 'Gráfico de Barras do alekao'
+                },
+                xAxis: {
+                    categories: ['Janeiro', 'Fevereiro', 'Março', 'Abril']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Valores'
+                    }
+                },
+                series: [{
+                    name: 'Valores',
+                    data: [10, 20, 30, 40]
+                }]
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="grafico" style="width: 600px; height: 400px;">
+    </div>
+</body>
+
+</html>
