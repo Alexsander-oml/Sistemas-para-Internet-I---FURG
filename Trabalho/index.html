@@ -7,6 +7,31 @@
   <title>Gerenciador de Refeições</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .grafico-container {
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+    .center-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #fff;
+      color: #333;
+    }
+    option {
+      background-color: #fff;
+      color: #333;
+    }
+  </style>
 </head>
 
 <body>
@@ -15,6 +40,46 @@
   </header>
 
   <main>
+    <section id="graficos">
+      <h2>Meta Diária em %</h2>
+      <div class="grafico-container"><canvas id="grafico-meta-diaria"></canvas></div>
+        
+      </div>
+
+      <h2>Calorias Ingeridas por Alimento</h2>
+      <div class="grafico-container">
+        <canvas id="grafico-calorias-ingeridas"></canvas>
+      </div>
+
+      <h2>Café da Manhã</h2>
+      <div class="grafico-container">
+        <canvas id="grafico-cafe-da-manha"></canvas>
+      </div>
+
+      <h2>Almoço</h2>
+      <div class="grafico-container">
+        <canvas id="grafico-almoco"></canvas>
+      </div>
+
+      <h2>Jantar</h2>
+      <div class="grafico-container">
+        <canvas id="grafico-jantar"></canvas>
+      </div>
+
+      <h2>Lanche</h2>
+      <div class="grafico-container">
+        <canvas id="grafico-lanche"></canvas>
+      </div>
+
+      <div class="center-button">
+        <button id="fechar-graficos">Fechar Gráficos</button>
+      </div>
+    </section>
+    <br>
+    <div class="center-button">
+      <button id="visualizar-graficos">Visualizar Gráficos</button>
+    </div>
+
     <section id="adicionar-refeicoes">
       <h2>Adicionar Refeições do Dia</h2>
       <form id="refeicao-form" class="form-meta">
@@ -28,12 +93,12 @@
             <option value="lanche">Lanche</option>
           </select>
         </div>
-
+        <br> 
         <button type="submit">Adicionar Refeição</button>
       </form>
     </section>
 
-    <section id="tabela-refeicoes">
+    <section id="tabela-refeicoes"></section>
       <h2>Refeições do Dia</h2>
       <table>
         <thead>
@@ -66,25 +131,177 @@
         </tbody>
       </table>
     </section>
-
-    <section id="graficos">
-      <h2>Distribuição de Nutrientes</h2>
-      <div class="grafico-container">
-        <canvas id="grafico-nutrientes"></canvas>
-      </div>
-
-      <h2>Progresso do Dia</h2>
-      <div class="grafico-container">
-        <canvas id="grafico-dia"></canvas>
-      </div>
-    </section>
   </main>
 
   <footer>
     <p>© 2025 Gerenciador de Refeições. Todos os direitos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById('visualizar-graficos').addEventListener('click', function() {
+      document.getElementById('graficos').style.display = 'block';
+
+      // Código para inicializar os gráficos
+      const ctxMetaDiaria = document.getElementById('grafico-meta-diaria').getContext('2d');
+      const graficoMetaDiaria = new Chart(ctxMetaDiaria, {
+        type: 'doughnut',
+        data: {
+          labels: ['Proteínas', 'Carboidratos', 'Gorduras'],
+          datasets: [{
+            label: 'Meta Diária em %',
+            data: [50, 30, 20],
+            backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 205, 86, 0.2)'],
+            borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 159, 64, 1)', 'rgba(255, 205, 86, 1)'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'Meta Diária em %'
+            }
+          }
+        }
+      });
+
+      const ctxCalorias = document.getElementById('grafico-calorias-ingeridas').getContext('2d');
+      const graficoCalorias = new Chart(ctxCalorias, {
+        type: 'pie',
+        data: {
+          labels: ['Café da Manhã', 'Almoço', 'Jantar', 'Lanche'],
+          datasets: [{
+            label: 'Calorias Ingeridas',
+            data: [300, 600, 400, 200],
+            backgroundColor: [
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(255, 159, 64, 0.2)',
+              'rgba(255, 205, 86, 0.2)',
+              'rgba(153, 102, 255, 0.2)'
+            ],
+            borderColor: [
+              'rgba(75, 192, 192, 1)',
+              'rgba(255, 159, 64, 1)',
+              'rgba(255, 205, 86, 1)',
+              'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'Calorias Ingeridas por Alimento'
+            }
+          }
+        }
+      });
+
+      const ctxCafeDaManha = document.getElementById('grafico-cafe-da-manha').getContext('2d');
+      const graficoCafeDaManha = new Chart(ctxCafeDaManha, {
+        type: 'bar',
+        data: {
+          labels: ['Proteínas', 'Carboidratos', 'Gorduras'],
+          datasets: [{
+            label: 'Café da Manhã',
+            data: [30, 50, 10],
+            backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 205, 86, 0.2)'],
+            borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 159, 64, 1)', 'rgba(255, 205, 86, 1)'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+      const ctxAlmoco = document.getElementById('grafico-almoco').getContext('2d');
+      const graficoAlmoco = new Chart(ctxAlmoco, {
+        type: 'bar',
+        data: {
+          labels: ['Proteínas', 'Carboidratos', 'Gorduras'],
+          datasets: [{
+            label: 'Almoço',
+            data: [40, 60, 15],
+            backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 205, 86, 0.2)'],
+            borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 159, 64, 1)', 'rgba(255, 205, 86, 1)'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+      const ctxJantar = document.getElementById('grafico-jantar').getContext('2d');
+      const graficoJantar = new Chart(ctxJantar, {
+        type: 'bar',
+        data: {
+          labels: ['Proteínas', 'Carboidratos', 'Gorduras'],
+          datasets: [{
+            label: 'Jantar',
+            data: [25, 30, 10],
+            backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 205, 86, 0.2)'],
+            borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 159, 64, 1)', 'rgba(255, 205, 86, 1)'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+      const ctxLanche = document.getElementById('grafico-lanche').getContext('2d');
+      const graficoLanche = new Chart(ctxLanche, {
+        type: 'bar',
+        data: {
+          labels: ['Proteínas', 'Carboidratos', 'Gorduras'],
+          datasets: [{
+            label: 'Lanche',
+            data: [10, 20, 5],
+            backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 205, 86, 0.2)'],
+            borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 159, 64, 1)', 'rgba(255, 205, 86, 1)'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    });
+
+    document.getElementById('fechar-graficos').addEventListener('click', function() {
+      document.getElementById('graficos').style.display = 'none';
+    });
+
+    // Inicialmente, esconda a seção de gráficos
+    document.getElementById('graficos').style.display = 'none';
+  </script>
 </body>
 
 </html>
